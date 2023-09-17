@@ -1,0 +1,1 @@
+print(len({i%42 for i in [*map(int, open(0))]}))
