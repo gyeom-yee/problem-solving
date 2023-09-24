@@ -5,5 +5,5 @@ ans = []
 while q:
     for _ in range(k-1):
         q.append(q.popleft())
-    ans.append(q.popleft())
-print(f"<{', '.join([str(i) for i in ans]) }>")
+    ans.append(str(q.popleft()))
+print(f"<{', '.join(ans) }>")
