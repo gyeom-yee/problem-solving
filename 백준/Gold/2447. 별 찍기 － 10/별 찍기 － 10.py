@@ -12,5 +12,4 @@ def star_stamp(n):
     return ans
 
 n = int(input())
-star_stamp(n)
 print("\n".join(star_stamp(n)))
