@@ -11,6 +11,6 @@ def hanoi(n, from_pos, by_pos, to_pos):
 
 ans = []
 memo = dict()
-n = int(input())
+n = int(sys.stdin.readline())
 print(2**n -1)
 sys.stdout.write(hanoi(n, 1, 2, 3))
