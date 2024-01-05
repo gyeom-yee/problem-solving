@@ -1,16 +1,21 @@
-n = int(input())
-for i in range(n-len(str(n))*9, n+1):
-    new = 0
-    n_i = i
+import sys
+input = sys.stdin.readline
+
+n = input()
+h = len(n)
+n = int(n)
+result = 0
+
+for i in range(n-h*9, n):
+    tmp = i
+    tmp_sum = 0
     if i <= 0: continue
     else:
-        while 1:
-            new += n_i%10
-            if not n_i//10: break
-            n_i //= 10
-        if i+new == n:
-            print(i)
+        while tmp//10 != 0:
+            tmp_sum += tmp%10
+            tmp //= 10
+        if i+tmp+tmp_sum == n:
+            result = i
             break
-        elif i >= n:
-            print(0)
-            break
+
+print(result)
