@@ -7,12 +7,11 @@ up_doc = doc[:]
 word = input().strip()
 count, start = 0, 0
 
-while 1:
-    index = up_doc.find(word)
-    if index == -1:
-        break
-    else:
-        up_doc = up_doc[index+len(word):]
+while start <= len(doc) - len(word):
+    if doc[start:start + len(word)] == word:
         count += 1
+        start += len(word)
+    else:
+        start += 1
 
-print(count)
+print (count)
