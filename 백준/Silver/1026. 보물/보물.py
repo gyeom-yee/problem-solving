@@ -1,0 +1,5 @@
+n = int(input())
+A = sorted(list(map(int, input().split())))
+B = sorted(list(map(int, input().split())), reverse=True)
+result = sum(map(lambda i, j : i * j, A, B))
+print(result)
