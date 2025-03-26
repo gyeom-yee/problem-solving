@@ -1,4 +1,7 @@
+import sys
 import math
+input = sys.stdin.readline
+
 n = int(input())
 a_li  = list(map(int, input().split()))
 b, c = map(int, input().split())
