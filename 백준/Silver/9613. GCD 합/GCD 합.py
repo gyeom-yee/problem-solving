@@ -10,7 +10,7 @@ def gcd(a, b):
 n = int(input())
 for _ in range(n):
     result = 0
-    arr = sorted(list(map(int, input().split()))[1:], reverse=True)
+    arr = list(map(int, input().split()))[1:]
     for twin in combinations(arr, 2):
         result += gcd(twin[0], twin[1])
     print(result)
