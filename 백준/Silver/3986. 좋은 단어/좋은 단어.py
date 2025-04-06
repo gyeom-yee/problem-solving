@@ -5,12 +5,12 @@ n = int(input())
 result = 0
 for _ in range(n):
     s = input().rstrip()
-    stack = []
     if len(s) % 2 != 0: continue
-
-    for i in s:
-        if not stack or stack[-1] != i: stack.append(i)
-        else: stack.pop()
-    if not stack:
-        result += 1
+    if s == s[::-1]: result += 1
+    else:
+        while 'AA' in s or 'BB' in s:
+            if 'AA' in s: s = s.replace('AA', '')
+            else: s = s.replace('BB', '')
+        if not s:
+            result += 1
 print(result)
