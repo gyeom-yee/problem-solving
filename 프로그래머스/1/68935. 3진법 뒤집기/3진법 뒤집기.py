@@ -1,10 +1,6 @@
 def solution(n):
-    answer = 0
     temp = ""
-    while n//3:
-        temp = str(n%3) + temp
+    while n:
+        temp += str(n%3)
         n //= 3
-    temp = str(n) + temp
-    for i in range(len(temp)):
-        answer += (3**i)*int(temp[i])
-    return answer
+    return int(temp, 3)
